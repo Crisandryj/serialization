@@ -18,7 +18,7 @@ end
     end 
 
     def to_s
-      "In B: #{number} \n #{@a_object.to_s}\n"
+      "In B: #{@number} \n #{@a_object.to_s}\n"
     end 
   end 
 
@@ -29,7 +29,7 @@ end
     end
 
     def to_s
-      "In C:\n #{a_object} #{b_object}\n"
+      "In C:\n #{@a_object} #{@b_object}\n"
     end 
   end
 
@@ -37,4 +37,12 @@ end
   b = B.new(7,a)
   c = C.new(b,a)
 
-  puts c
+  puts c.to_s
+
+  serialized_object = YAML::dump(c)
+
+  p serialized_object
+
+  puts YAML::load(serialized_object)
+
+  
