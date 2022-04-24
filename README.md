@@ -1,2 +1,2 @@
 # serialization
-Learning how methods to serialize.
+Learning methods to serialize and unserialze data.
